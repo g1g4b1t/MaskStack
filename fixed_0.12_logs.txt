@@ -1,0 +1,11 @@
+FORGETTING DETAILS: BitStack Fixed 0.12
+
+IMDB: Acc after learning task=80.2% | Acc after task 5=73.2% | Forgetting=7.0pp
+AGNews: Acc after learning task=84.2% | Acc after task 5=79.8% | Forgetting=4.5pp
+DBpedia: Acc after learning task=78.3% | Acc after task 5=76.7% | Forgetting=1.7pp
+Yelp: Acc after learning task=37.6% | Acc after task 5=35.6% | Forgetting=2.0pp
+Yahoo: Acc after learning task=47.0% | Acc after task 5=47.0% | Forgetting=0.0pp
+BWT for T1: -7.0pp
+
+Avg Forget: 3.8pp
+Total Locked: 15.0%
