@@ -74,6 +74,26 @@ These tests use a tiny local PyTorch model, so they do not download GPT-2 or
 datasets. They verify mask creation, excluded classifier heads, gradient
 zeroing hooks, exact restoration of masked weights, and cumulative mask updates.
 
+## Stronger Backbone Test
+
+You can also run an optional IMDB -> AGNews-binary no-replay test with a
+stronger Hugging Face backbone:
+
+```bash
+python stronger_model_test.py --model distilbert-base-uncased
+```
+
+For a stronger encoder, use RoBERTa on GPU:
+
+```bash
+python stronger_model_test.py --model roberta-base --device cuda --output results/roberta_imdb_agnews_seed42.json
+```
+
+This script compares sequential fine-tuning against BitStack on the same model.
+It downloads the selected model and datasets, so it is best run in Colab or on a
+local CUDA machine. Treat it as an additional robustness check, not as the
+reference 3.8pp benchmark.
+
 ## Reproduce
 
 ```bash
