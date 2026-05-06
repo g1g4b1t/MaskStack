@@ -62,6 +62,18 @@ Open `test.ipynb` in Colab and run all cells. It checks that:
 - Masked gradients are zeroed.
 - A mini IMDB -> AGNews stress test passes.
 
+## Unit Tests
+
+Run the fast CPU-only unit tests:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+These tests use a tiny local PyTorch model, so they do not download GPT-2 or
+datasets. They verify mask creation, excluded classifier heads, gradient
+zeroing hooks, exact restoration of masked weights, and cumulative mask updates.
+
 ## Reproduce
 
 ```bash
